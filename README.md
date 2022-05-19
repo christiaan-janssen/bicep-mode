@@ -2,7 +2,7 @@
 
 A major mode for the [Bicep language](https://github.com/Azure/bicep).
 
-I recently started working with Bicep, but found out that the was no package for Emacs. This is my first attempt at writing a package for Emacs, so it can be a bit rough around the edges.
+I recently started working with Bicep, but found out that there was no package for Emacs. This is my first attempt at writing a package for Emacs, so it can be a bit rough around the edges.
 
 ## What works 
 - Very basic syntax highlighting
@@ -19,3 +19,21 @@ to make this work, you need to install the lsp client
 ```
 
 I'm working on making this a variable.
+
+## Installing this package
+
+This package is not in melpa yet, here are some options to install it.
+
+### straight
+
+``` emacs-lisp
+(bicep-mode :type git :host github :repo "christiaan-janssen/bicep-mode")
+```
+
+### Doom Emacs 
+With Doom Emacs you can clone the package to a local dir and add this to you `config.el`:
+
+``` emacs-lisp
+(use-package! "bicep-mode"
+  :load-path "path/to/bicep-mode")
+```
